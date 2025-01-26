@@ -1,0 +1,421 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 15px/1.4 "Poppins", sans-serif;
+  background: #4ec5c1;
+  color: #333;
+}
+
+#app {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font: 15px/1.4 "Poppins", sans-serif;
+  padding: 15px;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: border 0.3s linear;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #4ec5c1;
+}
+
+button {
+  cursor: pointer;
+  font: 15px/1.4 "Poppins", sans-serif;
+  color: #555;
+  transition: all 0.3s linear;
+}
+
+button:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task {
+  background: #fff;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  position: relative;
+  margin: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.form button {
+  background: none;
+  border: none;
+  color: #4ec5c1;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.clearBtns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.clearBtns button {
+  width: 100%;
+  background: #4ec5c1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.clearBtns button:hover {
+  background: #333;
+}
+
+.pendingTasks {
+  padding: 0 6px;
+}
+
+.taskItems {
+  padding: 0 10px;
+}
+
+.taskItems li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.taskItems button {
+  background: none;
+  border: none;
+}
+
+.taskItems button:hover {
+  color: #4ec5c1;
+}
+
+.taskItems .toggle i {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle-completed {
+  text-decoration: line-through;
+}
+
+.taskItems .toggle.toggle-completed {
+  text-decoration:line-through;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px; 
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.btn-logout {
+position: absolute;
+top: 0;
+right: 0;
+border-radius: 20px;
+border: none;
+background-color: #44aca8;
+margin: 30px;
+padding: 15px;
+font-size: 14px;
+color: #fff;
+}
+
+.btn-login, .btn-register {
+  border-radius: 20px;
+  border: none;
+  background-color: #44aca8;
+  font-size: 16px;
+  width: 50%;
+  color: #fff;
+  padding: 10px 10px;
+  margin: 12px auto; 
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  text-decoration: none; 
+}
+
+.loginPage, .registerPage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-login:hover, .btn-register:hover {
+  background-color: #369c8c; 
+}
+
+.btn-addtask {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; 
+  box-sizing: border-box;
+}
+
+.btn-addtask i {
+  font-size: 20px; 
+  color: #4ec5c1; 
+  margin-left: 30px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 50px;
+  font: 15px/1.4 "Poppins", sans-serif;
+  padding: 10px;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: border 0.3s linear;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 1px solid #3f9996;
+}
+
+button.login-register-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4ec5c1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.login-register-btn:hover {
+  background-color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+button.toggle-register-btn {
+  background: none;
+  border: none;
+  color: #4ec5c1;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+button.toggle-register-btn:hover {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  font-size: 14px;
+}
+
+body {
+  font: 15px/1.4 "Poppins", sans-serif;
+  background: #4ec5c1;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-list-container {
+  text-align: center;
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-list-container h2 {
+  margin-bottom: 20px;
+}
+
+.create-list-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-list-container input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.create-list-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #44aca8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.create-list-container button:hover {
+  background-color: #369c8c; 
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+}
+
+.container-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  padding: 10px;
+  width: auto;
+  align-items: center;
+}
+
+.container-list * {
+  text-decoration: none; 
+  color: #333;
+  width: 100%;
+  background: #4ec5c1;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  text-align: center;
+  font-size: 24px;
+  flex-grow: 1;
+}
+
+.remove-list, .add-new-list, .choose-list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.choose-list select, .choose-list option{
+  font-size: 16px;
+  width: auto;
+  padding: 10px; 
+  border-radius: 10px; 
+}
